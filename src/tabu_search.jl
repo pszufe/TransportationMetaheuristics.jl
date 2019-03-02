@@ -24,7 +24,7 @@ function tabu_search(rs::RideShare; tabu_tenure=10, max_iterations=100)
     println("-------- INITIAL COST: $initial_cost")
     println("----------------------------------------------------------------")
 
-    num_nodes = mapreduce(length, initial_solution, init=length(initial_solution))
+    num_nodes = mapreduce(length, +, initial_solution, init=length(initial_solution))
 
     # Tabu list intialization to zero.
     tabu_list = zeros(Int,num_nodes,num_nodes)
