@@ -1,0 +1,6 @@
+authors = ["Przemyslaw Szufel <pszufe@gmail.com>"]
+name = "TransportationMetaheuristics"
+uuid = "7f96ee80-3d1b-11e9-090f-f1060f9681d9"
+version = "0.1.0"
+
+[deps]
