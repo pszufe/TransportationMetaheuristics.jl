@@ -54,7 +54,7 @@ function simulated_annealing(rs::RideShare;
     i, accept, k = 0, 0.0, 1
 
     println("Initial Solution:")
-    foreach((x, s) -> println("Driver #$x : $s"), enumerate(solution))
+    foreach(((x, s),) -> println("Driver #$x : $s"), enumerate(solution))
     println("Initial revenue: $current")
     waitbar = Progress(max_iterations, 1)
     while current_temp > final_temp && i < max_iterations && current < threshold
@@ -86,7 +86,7 @@ function simulated_annealing(rs::RideShare;
 
     println("Iterations: $i")
     println("Best Solution")
-    foreach((x, s) -> println("Driver #$x : $s"), enumerate(best_schedule))
+    foreach(((x, s),) -> println("Driver #$x : $s"), enumerate(best_schedule))
     println("Best revenue: $best")
     return (current_progress, best_schedule)
 end

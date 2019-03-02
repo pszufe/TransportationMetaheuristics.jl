@@ -40,7 +40,7 @@ function iterate_solution(solution::Vector{Vector{Int}})
         s_j = new_solution[rand(possible_drivers)]
         pos_i = rand(eachindex(s_i))
         pos_j = rand(eachindex(s_j))
-        s_i[pos_i], s_j[pos_j] = s_i[pos_j], s_j[pos_i]
+        s_i[pos_i], s_j[pos_j] = s_j[pos_j], s_i[pos_i]
     else # insert-delete
         s_j = rand(new_solution)
         pos_i = rand(eachindex(s_i));
